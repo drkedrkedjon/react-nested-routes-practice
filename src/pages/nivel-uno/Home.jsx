@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Home() {
-  return <h2>Este es ABOUT page, nivel 1 tambien</h2>;
+  return <h3>Este es HOME page, nivel 1</h3>;
 }

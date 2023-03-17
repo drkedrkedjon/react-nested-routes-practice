@@ -1,33 +1,34 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
-export default function Header() {
+export default function GuidesLayout() {
   return (
-    <div>
-      <h1>Es una practica de nested routes en React</h1>
-      <p>
-        Este es el nivel 1, componente LAYOUT. Aqui viene UI que se comparte
-      </p>
+    <>
+      <h3>Este es Guides Layout page, nivel 1 tambien</h3>
+      <p>Pero contiene submenu nav que controla nivel 2</p>
       <nav>
         <NavLink
           className={({ isActive }) => (isActive ? "a-active" : "")}
-          to="/"
+          to="."
+          end
         >
-          Home page
+          Sking
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? "a-active" : "")}
-          to="/about"
+          to="Walk"
         >
-          About
+          Walking
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? "a-active" : "")}
-          to="/guides"
+          to="bike"
         >
-          Guides
+          Biking
         </NavLink>
       </nav>
-    </div>
+
+      <Outlet />
+    </>
   );
 }

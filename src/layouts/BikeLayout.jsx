@@ -1,33 +1,34 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-
-export default function Header() {
+import { NavLink, Outlet } from "react-router-dom";
+export default function BikeLayout() {
   return (
-    <div>
-      <h1>Es una practica de nested routes en React</h1>
-      <p>
-        Este es el componente LAYOUT. Aqui viene UI que se comparte con todos
-      </p>
+    <>
+      <h3>Este es Bike Layout page, nivel 2 </h3>
+      <p>Falta menu del nivel 3</p>
       <nav>
         <NavLink
+          to="."
+          end
           className={({ isActive }) => (isActive ? "a-active" : "")}
-          to="/"
         >
-          Home page
+          Bjelasnica
         </NavLink>
         <NavLink
+          to="jahorina"
+          end
           className={({ isActive }) => (isActive ? "a-active" : "")}
-          to="/about"
         >
-          About
+          Jahorina
         </NavLink>
         <NavLink
+          to="igman"
+          end
           className={({ isActive }) => (isActive ? "a-active" : "")}
-          to="/guides"
         >
-          Guides
+          Igman
         </NavLink>
       </nav>
-    </div>
+      <Outlet />
+    </>
   );
 }

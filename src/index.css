@@ -8,3 +8,21 @@ body {
   padding-block: 2rem;
   padding-inline: 1rem;
 }
+
+a {
+  color: aquamarine;
+  font-style: uppercase;
+  text-transform: uppercase;
+}
+.a-active {
+  color: bisque;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+nav :first-child {
+  margin-right: auto;
+}

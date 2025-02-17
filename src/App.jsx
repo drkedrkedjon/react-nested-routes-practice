@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainLayout from "./Layouts/MainLayout";
 import GuidesLayout from "./Layouts/GuidesLayout";
 import BikeLayout from "./Layouts/BikeLayout";
-
 import About from "./pages/nivel-uno/About";
 import Home from "./pages/nivel-uno/Home";
 
